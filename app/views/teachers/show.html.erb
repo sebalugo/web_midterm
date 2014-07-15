@@ -3,6 +3,12 @@
 <p>
   <strong>Name:</strong>
   <%= @teacher.name %>
+  <br>
+  <strong>Identity:</strong>
+  <%= @teacher.identity %>
+  <br>
+  <strong>Active Subjects:</strong>
+  <%= @teacher.active_subjects %>
 </p>
 
 <%= link_to 'Edit', edit_teacher_path(@teacher) %> |

@@ -19,9 +19,8 @@
     <%= f.label :identity %><br>
     <%= f.text_field :identity %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+
+  <strong>Subjects: </strong><br><br> 
 
   <%= f.fields_for :subjects do |sub| %>
 
@@ -31,10 +30,15 @@
     <%= sub.label :identity %><br>
     <%= sub.text_field :identity %><br>
 
-    <%= sub.label :actie %><br>
+    <%= sub.label :active %><br>
     <%= sub.text_field :active %><br>
+
+    <br><br>
 
   <% end %>
 
+  <div class="actions">
+    <%= f.submit %>
+  </div>
 
 <% end %>
