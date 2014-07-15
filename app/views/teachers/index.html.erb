@@ -1,11 +1,13 @@
+<p id="notice"><%= notice %></p>
+
 <h1>Listing teachers</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Teacher Identity</th>
-      <th>Active Subjects</th>
+      <th>Name &nbsp</th>
+      <th>Identity &nbsp</th>
+      <th>ActiveSubjects &nbsp</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,6 +16,8 @@
     <% @teachers.each do |teacher| %>
       <tr>
         <td><%= teacher.name %></td>
+        <td><%= teacher.identity %></td>
+        <td><%= teacher.active_subjects %></td>
         <td><%= link_to 'Show', teacher %></td>
         <td><%= link_to 'Edit', edit_teacher_path(teacher) %></td>
         <td><%= link_to 'Destroy', teacher, method: :delete, data: { confirm: 'Are you sure?' } %></td>

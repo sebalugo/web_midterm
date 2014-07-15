@@ -15,6 +15,7 @@ class TeachersController < ApplicationController
   # GET /teachers/new
   def new
     @teacher = Teacher.new
+    6.times{@teacher.subjects.build}
   end
 
   # GET /teachers/1/edit
@@ -69,6 +70,6 @@ class TeachersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def teacher_params
-      params.require(:teacher).permit(:name)
+      params.require(:teacher).permit(:name,:identity,subjects_attributes:[:name,:identity,:id,:active])
     end
 end

@@ -15,7 +15,26 @@
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>
+  <div class="field">
+    <%= f.label :identity %><br>
+    <%= f.text_field :identity %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
+
+  <%= f.fields_for :subjects do |sub| %>
+
+    <%= sub.label :name %><br>
+    <%= sub.text_field :name %><br>
+
+    <%= sub.label :identity %><br>
+    <%= sub.text_field :identity %><br>
+
+    <%= sub.label :actie %><br>
+    <%= sub.text_field :active %><br>
+
+  <% end %>
+
+
 <% end %>

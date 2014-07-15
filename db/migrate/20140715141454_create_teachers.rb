@@ -2,7 +2,7 @@ class CreateTeachers < ActiveRecord::Migration
   def change
     create_table :teachers do |t|
       t.string :name
-      t.integer :identity
+      t.string :identity
 
       t.timestamps
     end

@@ -17,14 +17,14 @@ ActiveRecord::Schema.define(version: 20140715141523) do
     t.string   "name"
     t.string   "active"
     t.integer  "teacher_id"
-    t.integer  "subject_identity"
+    t.string   "identity"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "teachers", force: true do |t|
     t.string   "name"
-    t.integer  "teacher_identity"
+    t.string   "identity"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
