@@ -5,6 +5,19 @@ class TeachersController < ApplicationController
   # GET /teachers.json
   def index
     @teachers = Teacher.all
+
+    if params[:commit].present? 
+      
+      if params[:commit]=="OrderNames"
+        @teachers = @teachers.sort_by{|x| x.name}.reverse
+      end
+
+      if params[:commit]=="OrderSubjects"
+        @teachers = @teachers.sort_by{|x| x.active_subjects}.reverse
+      end
+
+    end
+
   end
 
   # GET /teachers/1
