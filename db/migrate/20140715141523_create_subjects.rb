@@ -4,7 +4,7 @@ class CreateSubjects < ActiveRecord::Migration
       t.string :name
       t.string :active
       t.integer :teacher_id
-      t.integer :subject_identity
+      t.integer :identity
 
       t.timestamps
     end
