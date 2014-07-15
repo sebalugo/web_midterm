@@ -10,6 +10,15 @@
   <strong>Active Subjects:</strong>
   <%= @teacher.active_subjects %>
 </p>
+<p>
+<strong>Subjects: </strong><br><br>
+<% @teacher.subjects.each do |sub| %>
+	<strong>Name: </strong><%=sub.name %><br>
+	<strong>Identity: </strong><%=sub.identity %><br>
+	<strong>Status: </strong><%=sub.active %><br>
+	<br><br>
+<% end %>
+</p>
 
 <%= link_to 'Edit', edit_teacher_path(@teacher) %> |
 <%= link_to 'Back', teachers_path %>
