@@ -1,12 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing teachers</h1>
+<div class="jumbotron">
+  <h1>Listing teachers</h1>
+</div>
 
 
 <%= form_tag '',method: "get" do%>
   
-  <%= submit_tag 'OrderNames'%>
-  <%= submit_tag 'OrderSubjects'%>
+  <%= submit_tag 'OrderNames' , :class => "btn btn-default"%>
+  <%= submit_tag 'OrderSubjects' , :class => "btn btn-default"%>
 
 <%end%>
 
@@ -29,8 +31,8 @@
         <td><%= teacher.name %>&nbsp</td>
         <td><%= teacher.identity %>&nbsp</td>
         <td><%= teacher.active_subjects %>&nbsp</td>
-        <td><%= link_to 'Show', teacher %></td>
-        <td><%= link_to 'Edit', edit_teacher_path(teacher) %></td>
+        <td><%= link_to 'Show', teacher ,:class => "btn btn-default"%></td>
+        <td><%= link_to 'Edit', edit_teacher_path(teacher) ,:class => "btn btn-default"%></td>
         <td><%= link_to 'Destroy', teacher, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-mini btn-danger'%></td>
       </tr>
     <% end %>
